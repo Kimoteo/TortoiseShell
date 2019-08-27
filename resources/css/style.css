@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+.container{
+  width:960px;
+  margin:0 auto;
+}
+
+#banner {
+  display: flex;
+  justify-content: space-between;
+  background-color:cadetblue;
+  color:white;
+}
+
+.title {
+  padding-left: 2rem;
+  font-size:1rem;
+  display: flex;
+  align-items: center;
+}
+
+.title img {
+  max-height: 1.5rem;
+}
+
+.title span {
+  padding-left:1rem;
+}
+
+nav li{
+  display:inline-block;
+  padding:1rem 2rem 1rem 0;
+}
+
+nav li:last-child{
+  display:none;
+}
+
+.hero {
+  background-image: url('../images/glasses-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:30rem;
+  padding-top: 1rem;
+}
+
+.hero-content {
+  margin:10rem -2rem 0 0;
+  background-color: white;
+  padding:1.5rem 5rem;
+  float: right;
+}
+
+.hero-content h1{
+  font-weight:bold;
+  font-size:2rem;
+  line-height: 1.2;
+}
+
+#offerings{
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+#offerings > div {
+  height:8rem;
+  width:11rem;
+  padding:0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#offerings img{
+  max-width: 5rem;
+}
+
+#offerings div:first-child img{
+  max-width: 3.5rem;
+}
+
+#offerings span{
+  display: block;
+  text-align: center;
+  font-size:0.9rem;
+  line-height: 1.4rem;
+}
+
+#info {
+  display:flex;
+}
+
+#info > div {
+  width:40%; /*setting 5 more due to the box-sizing: border-box;*/
+  padding-left:5%;
+}
+
+#info h2{
+  background-color: cadetblue;
+  color: white;
+  font-weight: bold;
+  font-size:1rem;
+  text-transform:uppercase;
+  padding:0.5rem 0 0.5rem 1.25rem;
+  width: 13rem;
+}
+
+#info p{
+  margin-top:1rem;
+}
+
+footer {
+  margin-top:5rem;
+}
+
+footer > div {
+  background-color: azure;
+  padding:4rem;
+  display: flex;
+  align-items: center;
+}
+
+footer img {
+  max-height:1.5rem;
+}
+
+footer span{
+  display: inline-block;
+  padding-left:1rem;
+}
+
+
+@media only screen and (max-width:1024px) {
+  .container{
+    width:100%;
+  }
+
+  nav li{
+    padding-right:1.2rem;
+  }
+
+  .hero {
+    padding-top:0;
+    height:22rem;
+  }
+
+  .hero-content {
+    margin:5rem 2rem 0 0;
+    padding:0.75rem 4rem;
+  }
+
+  .hero-content h1{
+    font-size:1.33rem;
+  }
+}
+
+@media only screen and (max-width:630px) {
+  /*The page breaks before 480 so adding a media query to fix*/
+  nav li{
+    display:none;
+  }
+
+  nav li:last-child{
+    display:inline-block;
+  }
+
+  #info {
+    display:block;
+  }
+
+  #info > div {
+    width:100%;
+    padding:0;
+    margin-bottom: 4rem;
+  }
+
+  #info h2{
+    width:100%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .hero {
+    height:17rem;
+    background-position: 20%;
+  }
+
+  .hero-content {
+    float: none;
+    margin:9rem 0 0 0;
+    padding:1rem 0;
+  }
+
+  .hero-content h1{
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  #offerings{
+    padding: 3.77rem 0 2.23rem 0;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+  }
+
+  #offerings > div {
+    padding:0 0 1.54rem 0;
+    justify-content: flex-start;
+    height:auto;
+    width:auto;
+  }
+
+  #offerings span{
+    font-size: 0.77rem;
+    padding-top:0.5rem;
+  }
+
+  #info p{
+    font-size:0.77rem;
+  }
+
+  footer > div{
+    justify-content: center;
+  }
+
+  footer span{
+    display:none;
+  }
+
+}
